@@ -1,0 +1,14 @@
+@import "../utils/placeholder";
+@import "../utils/mixins";
+
+/*стили для героя*/
+.hero {
+    @extend %hero; 
+    &-title {
+    margin-bottom: 30px;
+    @include fonts (44px, null, null, 0.06em);
+    text-transform: uppercase;
+    color: var(--white-color);
+    }
+}
+

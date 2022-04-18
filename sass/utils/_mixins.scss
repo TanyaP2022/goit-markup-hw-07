@@ -1,0 +1,30 @@
+// Для копіювання
+// @import "../utils/mixins";
+
+@mixin paddings ($top:0, $rt:0, $bm:0, $lf:0) {
+    padding-top: $top;
+    padding-right: $rt;
+    padding-bottom: $bm;
+    padding-left: $lf;
+}
+// Для копіювання
+//     @include paddings (null, null, null, null);
+
+@mixin margins ($top:0, $rt:0, $bm:0, $lf:0) {
+    margin-top: $top;
+    margin-right: $rt;
+    margin-bottom: $bm;
+    margin-left: $lf;
+}
+// Для копіювання
+//     @include margins (null, null, null, null);
+
+@mixin fonts ($fs:0, $fw:0, $lh:0, $ls:0) {
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+
+// Для копіювання
+//     @include fonts (null, null, null, null);

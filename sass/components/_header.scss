@@ -1,0 +1,40 @@
+@import "../utils/placeholder";
+@import "../utils/mixins";
+/*лого*/
+.header__logo {
+    @extend %header__logo;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+/*другой цвет для лого*/
+.header__span {
+    color: var(--black-color);
+}
+/*стили для навигации*/
+.body__header {
+    border-bottom: 1px solid var(--header-bord-color);
+    height: 80px;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav {
+    margin-left: 93px;
+    @include fonts (null, 500, 1.14, 0.02em);
+    height: 100%;
+}
+
+.header__connect {
+    display: flex;
+    align-items: center;
+    @include margins (null, null, null, null);
+    margin-left: auto;
+    padding-left: 0px;
+
+}

@@ -1,0 +1,26 @@
+@import "../utils/mixins";
+.connect__item {
+    @include margins (null, 0px, null, 30px);
+    &:nth-child(1) {
+        margin-left: 0;
+    }
+}
+.connect__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    @include fonts (14px, 500, 1.14, 0.02em);
+    color: var(--brend-color);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubik);
+    &:hover,
+    &:focus {
+        color: var(--blue-color);
+    }
+}
+.connect__icons {
+    margin-right: 10px;
+    fill: currentColor;
+}

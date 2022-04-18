@@ -1,0 +1,57 @@
+@import "../utils/mixins";
+
+.customer-hed {
+    @include fonts (36px, bold, 1.17, 0.03em);
+    text-align: center;
+    color: var(--style-color);
+}
+
+.customer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.customer-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icons-social);
+    border-radius: 4px;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubik);
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+    &:hover .customer-icons,
+    &:focus .customer-icons {
+        fill: var(--blue-color);
+    }
+    &:hover,
+    &:focus {
+        border-color: var(--blue-color);
+    }
+}
+
+.customer-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: currentColor;
+    cursor: pointer;
+}
+
+.customer-icons {
+    fill: var(--icons-social);
+    transition-property: fill;
+    transition-duration: 2550ms;
+    transition-timing-function: var(--cubik);
+}

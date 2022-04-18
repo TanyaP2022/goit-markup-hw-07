@@ -1,0 +1,62 @@
+@import "../utils/mixins";
+%box {
+    padding-top: 0px;
+}
+
+%portfolio-btn {
+    display: flex;
+    @include margins (0px, null, 0px, auto);
+    padding-left: 0px;
+    justify-content: center;
+}
+%footer {
+    @include paddings (60px, null, 60px, null);
+    background-color: var(--hero-color);
+}
+%header__logo {
+    @include paddings (24px, null, 25px, null);
+
+    font-family: $logo-font;
+    @include fonts (26px, bold, 1.19, 0.03em);
+    color: var(--blue-color);
+    text-decoration: none;
+}
+%hero {
+    width: 1600px;
+    height: 600px;
+    margin: auto;
+    @include paddings (200px, null, 200px, null);
+    background-color: var(--hero-color);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+%backdrop {
+    position: fixed;
+    top: 0;
+    left: 50%;
+
+    width: 100vw;
+    height: 100vh;
+
+    transform: translateX(-50%);
+
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+
+    transition: opacity 250ms var(--cubik),
+    visibility 250ms var(--cubik);
+}
+%portfolio-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline-start: 0pt;
+    @include margins (50px, null, 0px, null);
+}
+%team {
+    background-color: var(--btn-color);
+}
